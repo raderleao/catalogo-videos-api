@@ -31,6 +31,10 @@ public class ListCategoryUseCaseTest extends UseCaseTest {
                 Fixture.Categories.aulas()
         );
 
+        final var expectedItems = categories.stream()
+                .map(ListCategoryOutput::from)
+                .toList();
+
         final var expectedPage = 0;
         final var expectedPerPage = 10;
         final var expectedTerms = "Algo";
@@ -46,7 +50,8 @@ public class ListCategoryUseCaseTest extends UseCaseTest {
 
         final var expectedOutPut = pagination.map(ListCategoryOutput::from);
 
-        when(this.categoryGateway.findAll(any())).thenReturn(pagination);
+        when(this.categoryGateway.findAll(any()))
+                .thenReturn(pagination);
 
         // when
         final var actualOutput = this.useCase.execute(aQuery);
@@ -54,6 +59,10 @@ public class ListCategoryUseCaseTest extends UseCaseTest {
         // then
         Assertions.assertEquals(expectedPage, actualOutput.meta().currentPage());
         Assertions.assertEquals(expectedPerPage, actualOutput.meta().perPage());
-        Assertions.assertEquals(expectedItemsCount, actualOutput.data().size());
+        Assertions.assertEquals(expectedItemsCount, actualOutput.meta().total());
+        Assertions.assertTrue(
+                expectedItems.size() == actualOutput.data().size() &&
+                        expectedItems.containsAll(actualOutput.data())
+        );
     }
 }
