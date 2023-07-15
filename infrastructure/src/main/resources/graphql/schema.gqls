@@ -1,0 +1,10 @@
+
+type Query {
+    categories(
+        _: Boolean
+    )
+}
+
+type Category {
+    _: Boolean
+}

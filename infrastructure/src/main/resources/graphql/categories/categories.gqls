@@ -1,0 +1,15 @@
+
+type Query {
+    categories(
+        search: String = "",
+        page: Int = 0,
+        perPage
+
+    )
+}
+
+type Category {
+    id: ID!
+    name: String!
+    description: Spring
+}
