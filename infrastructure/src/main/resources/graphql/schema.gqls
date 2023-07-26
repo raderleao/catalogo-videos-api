@@ -1,10 +1,8 @@
 
 type Query {
-    categories(
-        _: Boolean
-    )
+    _: Boolean
 }
 
-type Category {
+type Mutation {
     _: Boolean
 }

@@ -1,4 +1,4 @@
-package com.raderleao.catalogo.infrastructure.configuration.json;
+package com.fullcycle.catalogo.infrastructure.configuration.json;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

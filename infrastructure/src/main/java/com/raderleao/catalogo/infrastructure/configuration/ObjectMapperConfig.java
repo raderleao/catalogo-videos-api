@@ -1,11 +1,11 @@
-package com.raderleao.catalogo.infrastructure.configuration;
+package com.fullcycle.catalogo.infrastructure.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.raderleao.catalogo.infrastructure.configuration.json.Json;
+import com.fullcycle.catalogo.infrastructure.configuration.json.Json;
+import org.springframework.boot.jackson.JsonComponent;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@JsonComponent
 public class ObjectMapperConfig {
 
     @Bean

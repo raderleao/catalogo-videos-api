@@ -1,4 +1,4 @@
-package com.raderleao.catalogo.infrastructure;
+package com.fullcycle.catalogo.infrastructure;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.JwtRequestPostProcessor;

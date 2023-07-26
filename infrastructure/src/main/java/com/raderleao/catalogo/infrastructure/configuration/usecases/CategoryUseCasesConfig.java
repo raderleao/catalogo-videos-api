@@ -1,9 +1,9 @@
-package com.raderleao.catalogo.infrastructure.configuration.usecases;
+package com.fullcycle.catalogo.infrastructure.configuration.usecases;
 
-import com.raderleao.catalogo.application.category.delete.DeleteCategoryUseCase;
-import com.raderleao.catalogo.application.category.list.ListCategoryUseCase;
-import com.raderleao.catalogo.application.category.save.SaveCategoryUseCase;
-import com.raderleao.catalogo.domain.category.CategoryGateway;
+import com.fullcycle.catalogo.application.category.delete.DeleteCategoryUseCase;
+import com.fullcycle.catalogo.application.category.list.ListCategoryUseCase;
+import com.fullcycle.catalogo.application.category.save.SaveCategoryUseCase;
+import com.fullcycle.catalogo.domain.category.CategoryGateway;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

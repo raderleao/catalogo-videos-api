@@ -1,8 +1,6 @@
-package com.raderleao.catalogo.infrastructure;
+package com.fullcycle.catalogo.infrastructure;
 
-import com.raderleao.catalogo.infrastructure.configuration.WebServerConfig;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.fullcycle.catalogo.infrastructure.configuration.WebServerConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.AbstractEnvironment;
@@ -10,10 +8,8 @@ import org.springframework.core.env.AbstractEnvironment;
 @SpringBootApplication
 public class Main {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Main.class);
-
     public static void main(String[] args) {
-        System.setProperty(AbstractEnvironment.DEFAULT_PROFILES_PROPERTY_NAME, "development");
+        System.setProperty(AbstractEnvironment.DEFAULT_PROFILES_PROPERTY_NAME, "sandbox");
         SpringApplication.run(WebServerConfig.class, args);
     }
 }

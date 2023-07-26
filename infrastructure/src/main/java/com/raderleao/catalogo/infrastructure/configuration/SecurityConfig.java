@@ -1,5 +1,6 @@
-package com.raderleao.catalogo.infrastructure.configuration;
+package com.fullcycle.catalogo.infrastructure.configuration;
 
+import com.nimbusds.jose.shaded.gson.JsonObject;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -15,7 +16,6 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.jwt.JwtClaimNames;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.security.web.SecurityFilterChain;
-import com.nimbusds.jose.shaded.gson.JsonObject;
 
 import java.util.*;
 import java.util.function.Function;
@@ -25,7 +25,7 @@ import java.util.stream.Stream;
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity(securedEnabled = true, jsr250Enabled = true)
-@Profile("!development")
+@Profile("!development & !sandbox")
 public class SecurityConfig {
 
     private static final String ROLE_ADMIN = "CATALOGO_ADMIN";
